@@ -32,8 +32,8 @@ export const FamilyNode = React.memo(
           )}
           onClick={clickHandler}
         >
-          <img src={node.profileImage ? node.profileImage : node.gender.toLowerCase() == "male" ? "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png":"https://www.kindpng.com/picc/m/24-248273_profile-image-png-of-a-woman-female-profile.png"} style={{height:"100%"}}/>
-          {/* <div className={css.id}>{node.id}</div> */}
+          {/* <img src={node.profileImage ? node.profileImage : node.gender.toLowerCase() == "male" ? "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png":"https://www.kindpng.com/picc/m/24-248273_profile-image-png-of-a-woman-female-profile.png"} style={{height:"100%"}}/> */}
+          <div className={css.id}>{node.name}</div>
         </div>
         {node.hasSubTree && (
           <div
