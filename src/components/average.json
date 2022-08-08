@@ -1,0 +1,64 @@
+[
+  {
+    "id": "P01",
+    "gender": "Male",
+    "name": "sabari",
+    "profile": "https://wikijay.com/wp-content/uploads/2021/10/vikatan_2021-05_88a3b08e-bf1e-4e46-9361-8a414c4c6a1a_60abbda05de13-min.jpg",
+    "spouses": [{ "id": "P02", "type": "married" }],
+    "siblings": [],
+    "parents": [],
+    "children": [{ "id": "P03", "type": "married" }],
+    "profileImage": "https://images.newindianexpress.com/uploads/user/imagelibrary/2022/2/6/w1200X800/MK_Stalin_PTI.jpg"
+  },
+  {
+    "id": "P02",
+    "gender": "female",
+    "name": "wife",
+    "profile": "https://wikijay.com/wp-content/uploads/2021/10/vikatan_2021-05_88a3b08e-bf1e-4e46-9361-8a414c4c6a1a_60abbda05de13-min.jpg",
+    "spouses": [{ "id": "P01", "type": "married" }],
+    "siblings": [],
+    "parents": [],
+    "children": [{ "id": "P03", "type": "married" }],
+    "profileImage": "https://images.newindianexpress.com/uploads/user/imagelibrary/2022/2/6/w1200X800/MK_Stalin_PTI.jpg"
+  },
+  {
+    "id": "P03",
+    "gender": "Male",
+    "name": "child",
+    "profile": "https://wikijay.com/wp-content/uploads/2021/10/vikatan_2021-05_88a3b08e-bf1e-4e46-9361-8a414c4c6a1a_60abbda05de13-min.jpg",
+    "spouses": [{ "id": "P05", "type": "married" }],
+    "siblings": [],
+    "parents": [
+      { "id": "P01", "type": "blood" },
+      { "id": "P02", "type": "blood" }
+    ],
+    "children": [{ "id": "P04", "type": "blood" }],
+    "profileImage": "https://images.newindianexpress.com/uploads/user/imagelibrary/2022/2/6/w1200X800/MK_Stalin_PTI.jpg"
+  },
+
+  {
+    "id": "P04",
+    "gender": "Male",
+    "name": " childodachild",
+    "profile": "https://wikijay.com/wp-content/uploads/2021/10/vikatan_2021-05_88a3b08e-bf1e-4e46-9361-8a414c4c6a1a_60abbda05de13-min.jpg",
+    "spouses": [],
+    "siblings": [],
+    "parents": [
+      { "id": "P03", "type": "blood" },
+      { "id": "P05", "type": "blood" }
+    ],
+    "children": [],
+    "profileImage": "https://images.newindianexpress.com/uploads/user/imagelibrary/2022/2/6/w1200X800/MK_Stalin_PTI.jpg"
+  },
+  {
+    "id": "P05",
+    "gender": "Male",
+    "name": "childwife",
+    "profile": "https://wikijay.com/wp-content/uploads/2021/10/vikatan_2021-05_88a3b08e-bf1e-4e46-9361-8a414c4c6a1a_60abbda05de13-min.jpg",
+    "spouses": [{ "id": "P03", "type": "married" }],
+    "siblings": [],
+    "parents": [],
+    "children": [{ "id": "P04", "type": "blood" }],
+    "profileImage": "https://images.newindianexpress.com/uploads/user/imagelibrary/2022/2/6/w1200X800/MK_Stalin_PTI.jpg"
+  }
+]

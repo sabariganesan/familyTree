@@ -1,0 +1,78 @@
+{
+  "auth": true,
+  "message": "data found",
+  "data": {
+    "isProfileAvailable": true,
+    "node": [
+      {
+        "mappingDetails": [
+          {
+            "status": "requested",
+            "sourceId": "3a878c85-bd47-4a42-8713-a0cbbaa21603",
+            "targetId": "e1e0c70c-2403-4ae9-a74b-aa48a5779085",
+            "mappingId": "e750c862-e80d-4889-8761-0469916f4338",
+            "relationship": "spouse"
+          },
+          {
+            "status": "requested",
+            "sourceId": "3a878c85-bd47-4a42-8713-a0cbbaa21603",
+            "targetId": "07d2c8d7-87b2-4185-9a89-f4ca4f9155f9",
+            "mappingId": "2f0e0068-efd2-42a5-a1d1-1036a457ab2c",
+            "relationship": "child"
+          },
+          {
+            "status": "requested",
+            "sourceId": "3a878c85-bd47-4a42-8713-a0cbbaa21603",
+            "targetId": "9e811b8b-ba35-40e5-b0d7-b4e7f49c21fb",
+            "mappingId": "977f1e3a-ecb1-4318-a5af-71a41cdb23a7",
+            "relationship": "father"
+          },
+          {
+            "status": "requested",
+            "sourceId": "3a878c85-bd47-4a42-8713-a0cbbaa21603",
+            "targetId": "d45d597d-1e4c-47fe-8d31-3c0ecbaccba6",
+            "mappingId": "8ff61ee8-67e3-41ca-8808-f8b2e9e00759",
+            "relationship": "mother"
+          }
+        ],
+        "profileDetails": [
+          {
+            "name": "ddd",
+            "gender": null,
+            "profileId": "e1e0c70c-2403-4ae9-a74b-aa48a5779085",
+            "mobileNumber": "9080961863",
+            "profileImage": null
+          },
+          {
+            "name": "baby",
+            "gender": null,
+            "profileId": "07d2c8d7-87b2-4185-9a89-f4ca4f9155f9",
+            "mobileNumber": "9080961763",
+            "profileImage": null
+          },
+          {
+            "name": "ggg",
+            "gender": null,
+            "profileId": "9e811b8b-ba35-40e5-b0d7-b4e7f49c21fb",
+            "mobileNumber": "9080961663",
+            "profileImage": null
+          },
+          {
+            "name": "ppp",
+            "gender": null,
+            "profileId": "d45d597d-1e4c-47fe-8d31-3c0ecbaccba6",
+            "mobileNumber": "9080961563",
+            "profileImage": null
+          },
+          {
+            "name": "Aravind_7",
+            "gender": "male",
+            "profileId": "3a878c85-bd47-4a42-8713-a0cbbaa21603",
+            "mobileNumber": "9080961897",
+            "profileImage": "filename.jpg"
+          }
+        ]
+      }
+    ]
+  }
+}
