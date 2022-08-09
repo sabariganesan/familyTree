@@ -10,124 +10,124 @@ function App() {
   const [treeData, setTreeData] = useState([]);
 
   //formatedData
-  // function getNodeByRelationship(relationShip, mappingDetails, sourceNode) {
-  //   if (mappingDetails) {
-  //     let temp = mappingDetails.find((x) =>
-  //       relationShip == "Spouse"
-  //         ? (x.targetNode == sourceNode || x.sourceNode == sourceNode) &&
-  //           x.relationShip == "Spouse"
-  //         : x.targetNode == sourceNode && x.relationShip == relationShip
-  //     );
-  //     if (temp) {
-  //       if (temp.targetNode == sourceNode) {
-  //         return temp.sourceNode;
-  //       } else {
-  //         return temp.targetNode;
-  //       }
-  //     }
-  //   }
-  //   return null;
-  // }
+  function getNodeByRelationship(relationShip, mappingDetails, sourceNode) {
+    if (mappingDetails) {
+      let temp = mappingDetails.find((x) =>
+        relationShip == "Spouse"
+          ? (x.targetNode == sourceNode || x.sourceNode == sourceNode) &&
+            x.relationShip == "Spouse"
+          : x.targetNode == sourceNode && x.relationShip == relationShip
+      );
+      if (temp) {
+        if (temp.targetNode == sourceNode) {
+          return temp.sourceNode;
+        } else {
+          return temp.targetNode;
+        }
+      }
+    }
+    return null;
+  }
 
-  // function formatData(dataLatest) {
-  //   let tempData = [];
-  //   if (dataLatest) {
-  //     dataLatest.profileDetails.forEach((profile) => {
-  //       let fatherNode = getNodeByRelationship(
-  //         "Father",
-  //         dataLatest.mappingDetails,
-  //         profile.profileId
-  //       );
-  //       let motherNode = getNodeByRelationship(
-  //         "Mother",
-  //         dataLatest.mappingDetails,
-  //         profile.profileId
-  //       );
-  //       let spouseNode = getNodeByRelationship(
-  //         "Spouse",
-  //         dataLatest.mappingDetails,
-  //         profile.profileId
-  //       );
-  //       let parent = [];
-  //       let sequence = [];
-  //       if (fatherNode) {
-  //         parent.push(fatherNode);
-  //       }
-  //       if (motherNode) {
-  //         parent.push(motherNode);
-  //       }
-  //       if (spouseNode) {
-  //         sequence.push(spouseNode);
-  //       }
-  //       tempData.push({
-  //         profileId: profile.profileId,
-  //         parentNodeId: parent,
-  //         seqNodeId: sequence,
-  //         name: profile.name,
-  //         gender: profile.gender,
-  //         nodeId: profile.profileId,
-  //         relationShip: profile.relationShip,
-  //         profileImage: profile.profileImage,
-  //       });
-  //     });
-  //     console.log(tempData, "temo");
-  //     let formatedData = [];
-  //     for (const treeData of tempData) {
-  //       let childList = [];
-  //       const Spouse =
-  //         treeData.seqNodeId?.length > 0
-  //           ? treeData.seqNodeId.map((id) => {
-  //               const spousedata = {
-  //                 id,
-  //                 type: "married",
-  //               };
-  //               return spousedata;
-  //             })
-  //           : [];
-  //       const parent =
-  //         treeData.parentNodeId?.length > 0
-  //           ? treeData.parentNodeId.map((id) => {
-  //               const parentData = {
-  //                 id,
-  //                 type: "blood",
-  //               };
-  //               return parentData;
-  //             })
-  //           : [];
-  //       for (const tree of tempData) {
-  //         if (tree.parentNodeId?.length > 0) {
-  //           for (const parent of tree.parentNodeId) {
-  //             const combinationData = {
-  //               id: tree.profileId,
-  //               parentId: parent,
-  //               type: "blood",
-  //             };
-  //             childList.push(combinationData);
-  //           }
-  //         }
-  //       }
-  //       let treeReformatedData = {
-  //         id: treeData.profileId,
-  //         gender: treeData.gender,
-  //         name: treeData.name,
-  //         profile:
-  //           "https://wikijay.com/wp-content/uploads/2021/10/vikatan_2021-05_88a3b08e-bf1e-4e46-9361-8a414c4c6a1a_60abbda05de13-min.jpg",
+  function formatData(dataLatest) {
+    let tempData = [];
+    if (dataLatest) {
+      dataLatest.profileDetails.forEach((profile) => {
+        let fatherNode = getNodeByRelationship(
+          "Father",
+          dataLatest.mappingDetails,
+          profile.profileId
+        );
+        let motherNode = getNodeByRelationship(
+          "Mother",
+          dataLatest.mappingDetails,
+          profile.profileId
+        );
+        let spouseNode = getNodeByRelationship(
+          "Spouse",
+          dataLatest.mappingDetails,
+          profile.profileId
+        );
+        let parent = [];
+        let sequence = [];
+        if (fatherNode) {
+          parent.push(fatherNode);
+        }
+        if (motherNode) {
+          parent.push(motherNode);
+        }
+        if (spouseNode) {
+          sequence.push(spouseNode);
+        }
+        tempData.push({
+          profileId: profile.profileId,
+          parentNodeId: parent,
+          seqNodeId: sequence,
+          name: profile.name,
+          gender: profile.gender,
+          nodeId: profile.profileId,
+          relationShip: profile.relationShip,
+          profileImage: profile.profileImage,
+        });
+      });
+      console.log(tempData, "temo");
+      let formatedData = [];
+      for (const treeData of tempData) {
+        let childList = [];
+        const Spouse =
+          treeData.seqNodeId?.length > 0
+            ? treeData.seqNodeId.map((id) => {
+                const spousedata = {
+                  id,
+                  type: "married",
+                };
+                return spousedata;
+              })
+            : [];
+        const parent =
+          treeData.parentNodeId?.length > 0
+            ? treeData.parentNodeId.map((id) => {
+                const parentData = {
+                  id,
+                  type: "blood",
+                };
+                return parentData;
+              })
+            : [];
+        for (const tree of tempData) {
+          if (tree.parentNodeId?.length > 0) {
+            for (const parent of tree.parentNodeId) {
+              const combinationData = {
+                id: tree.profileId,
+                parentId: parent,
+                type: "blood",
+              };
+              childList.push(combinationData);
+            }
+          }
+        }
+        let treeReformatedData = {
+          id: treeData.profileId,
+          gender: treeData.gender,
+          name: treeData.name,
+          profile:
+            "https://wikijay.com/wp-content/uploads/2021/10/vikatan_2021-05_88a3b08e-bf1e-4e46-9361-8a414c4c6a1a_60abbda05de13-min.jpg",
 
-  //         spouses: Spouse,
-  //         siblings: [],
-  //         parents: childList.filter(
-  //           (data) => data.parentId == treeData.profileId
-  //         ),
-  //         children: parent,
-  //         profileImage: treeData.profileImage,
-  //       };
-  //       formatedData.push(treeReformatedData);
-  //     }
-  //     console.log(formatedData, "tempformet");
+          spouses: Spouse,
+          siblings: [],
+          parents:parent ,
+          children: childList.filter(
+            (data) => data.parentId == treeData.profileId
+          ),
+          profileImage: treeData.profileImage,
+        };
+        formatedData.push(treeReformatedData);
+      }
+      console.log(formatedData, "tempformet");
 
-  //     setTreeData(formatedData);
-  //   }
-  // }
+      setTreeData(formatedData);
+    }
+  }
 
   //end
 
@@ -244,9 +244,9 @@ function App() {
   };
 
   useEffect(() => {
-    handleIsverifiedUser();
+    // handleIsverifiedUser();
     // handleVerifyUser();
-    // formatData(familyTreeData);
+    formatData(familyTreeData);
   }, [familyTreeData]);
 
   return renderTree(treeStatus);
